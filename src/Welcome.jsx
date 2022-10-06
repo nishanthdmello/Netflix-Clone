@@ -32,7 +32,7 @@ class WelcomeSlide extends React.Component {
     }
 }
 
-class Slide2 extends React.Component {
+class Slide extends React.Component {
     render() {
         return(
             <div style={{backgroundColor:"black", display:"inline-block"}}>
@@ -57,5 +57,5 @@ export {
     NavBar,
     Divider,
     WelcomeSlide,
-    Slide2
+    Slide
 }

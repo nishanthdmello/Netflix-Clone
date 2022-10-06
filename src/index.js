@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import {NavBar, WelcomeSlide, Slide2, Divider} from './Welcome';
+import {NavBar, WelcomeSlide, Slide, Divider} from './Welcome';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -8,7 +8,7 @@ root.render(
     <NavBar/>
     <WelcomeSlide/>
     <Divider/>
-    <Slide2/>
+    <Slide/>
     <Divider/>
   </div>
 );
