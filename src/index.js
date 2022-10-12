@@ -4,7 +4,7 @@ import { NavBar, WelcomeSlide, Slide, Divider, Slide1, FAQ } from "./Welcome";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <div style={{ backgroundColor: "#3f053a" }}>
+  <div>
     <NavBar />
     <WelcomeSlide />
     <Divider />
