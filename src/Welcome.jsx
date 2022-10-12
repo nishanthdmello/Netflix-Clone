@@ -6,66 +6,73 @@ import netflix_children_profiles from "./resources/netflix_children_profiles.png
 import "./style.css";
 
 class NavBar extends React.Component {
+  style_div = {
+    position: "fixed",
+    display: "grid",
+    background: "#222222",
+    width: "100%",
+    height: "90px",
+    zIndex: "5",
+  };
+  style_img = {
+    height: "70%",
+  };
+  style_button = {
+    backgroundColor: "#db4dce",
+    color: "white",
+    width: "100px",
+    height: "40px",
+    borderRadius: "5px",
+    position: "absolute",
+    margin: "20px",
+    right: "20px",
+  };
   render() {
     return (
-      <nav
-        style={{
-          backgroundColor: "#3f053a",
-          color: "white",
-          display: "inline-block",
-        }}>
-        <img
-          src={mflixlogo}
-          alt="demo pic"
-          style={{ width: "120px", height: "100px" }}
-        />
-        <button
-          style={{
-            backgroundColor: "#db4dce",
-            color: "white",
-            display: "inline-block",
-            width: "100px",
-            height: "40px",
-            borderRadius: "5px",
-            position: "absolute",
-            margin: "20px",
-            right: "20px",
-          }}>
-          <b>Sign In</b>
-        </button>
-      </nav>
+      <div style={this.style_div}>
+        <img src={mflixlogo} alt="logo" style={this.style_img} />
+        <button style={this.style_button}>Sign In</button>
+      </div>
     );
   }
 }
 
 class WelcomeSlide extends React.Component {
+  style_img = {
+    width: "100%",
+    height: "800px",
+    opacity: "50%",
+  };
+  style_p = {
+    fontSize: "30px",
+    color: "white",
+    fontFamily: "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
+  };
+  style_input = {
+    width: "400px",
+    height: "50px",
+    padding: "0px 10px",
+    borderRadius: "10px",
+    fontSize: "18px",
+  };
+  style_button = {
+    backgroundColor: "#db4dce",
+    color: "white",
+    // display: "inline-block",
+    width: "100px",
+    height: "40px",
+    borderRadius: "5px",
+  };
+  style_center={
+    margin:"center",
+
+  }
   render() {
     return (
-      <div>
-        <img
-          src={sl1_bg}
-          alt="demo pic"
-          style={{
-            zIndex: "-5",
-            width: "1335px",
-            height: "575px",
-            opacity: "50%",
-          }}
-        />
-        <center
-          style={{
-            zIndex: "0",
-            position: "absolute",
-            top: "250px",
-            left: "15%",
-          }}>
-          <p
-            style={{
-              fontSize: "30px",
-              color: "white",
-              fontFamily:
-                "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
-            }}>
+      <div style={{ backgroundColor: "#3f053a" }}>
+        <img src={sl1_bg} alt="demo pic" style={this.style_img} />
+        <div style={this.style_center}>
+          <p style={this.style_p}>
             Subscribe to get unlimited access to Movies and TV Shows that you
             can <br />
             watch from anywhere anytime. Cancel Subscription when you want to.
@@ -73,20 +80,12 @@ class WelcomeSlide extends React.Component {
           <input
             type="email"
             placeholder="Enter your email address"
-            style={{ width: "400px", height: "50px", borderRadius: "10px",padding:"0px 10px",fontSize:"18px" }}
+            style={this.style_input}
           />
-          <button
-            style={{
-              backgroundColor: "#db4dce",
-              color: "white",
-              display: "inline-block",
-              width: "100px",
-              height: "40px",
-              borderRadius: "5px",
-            }}>
+          <button style={this.style_button}>
             <b>See Plans</b>
           </button>
-        </center>
+        </div>
       </div>
     );
   }
@@ -97,10 +96,11 @@ class Slide extends React.Component {
     return (
       <div
         style={{
-          backgroundColor: "black",
-          display: "inline-block",
+          // display: "inline-block",
           height: "350px",
-        }}>
+          backgroundColor: "black",
+        }}
+      >
         <img src={netflix_on_tv} alt="demo pic" />
         <p
           style={{
@@ -108,10 +108,13 @@ class Slide extends React.Component {
             position: "absolute",
             padding: "100px",
             display: "inline-block",
+            marginTop: "60px",
+
             fontSize: "30px",
             fontFamily:
               "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
-          }}>
+          }}
+        >
           Watch your favourite Movies and TV Shows on your big screen
         </p>
       </div>
@@ -125,23 +128,29 @@ class Slide1 extends React.Component {
       <div
         style={{
           backgroundColor: "black",
-          display: "inline-block",
-          height: "350px",
-        }}>
-        <img src={netflix_children_profiles} alt="demo pic" />
+          // display: "inline-block",
+          height: "450px",
+        }}
+      >
+        <img
+          src={netflix_children_profiles}
+          alt="demo pic"
+          style={{ width: "600px" }}
+        />
         <p
           style={{
             color: "white",
             position: "absolute",
             padding: "100px",
+            marginTop: "100px",
             display: "inline-block",
             fontSize: "30px",
             fontFamily:
               "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
-          }}>
-          Create Profiles for Kids and set
-          <br /> them free to play and explore in
-          <br /> entertainment made for them
+          }}
+        >
+          Create Profiles for Kids and set them free to play and explore in
+          entertainment made for them
         </p>
       </div>
     );
