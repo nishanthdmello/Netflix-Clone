@@ -59,24 +59,29 @@ class WelcomeSlide extends React.Component {
     backgroundColor: "#db4dce",
     color: "white",
     // display: "inline-block",
-    width: "100px",
-    height: "40px",
-    borderRadius: "5px",
+    width: "130px",
+    marginLeft:"30px",
+    height: "50px",
+    borderRadius: "10px",
   };
   style_center={
-    margin:"center",
+    position:"absolute",
+    marginLeft:"445px",
+    marginTop:"-445px"
 
   }
   render() {
     return (
       <div style={{ backgroundColor: "#3f053a" }}>
         <img src={sl1_bg} alt="demo pic" style={this.style_img} />
-        <div style={this.style_center}>
+        <center style={this.style_center}>
           <p style={this.style_p}>
             Subscribe to get unlimited access to Movies and TV Shows that you
             can <br />
             watch from anywhere anytime. Cancel Subscription when you want to.
           </p>
+          <br /><br />
+
           <input
             type="email"
             placeholder="Enter your email address"
@@ -85,7 +90,7 @@ class WelcomeSlide extends React.Component {
           <button style={this.style_button}>
             <b>See Plans</b>
           </button>
-        </div>
+        </center>
       </div>
     );
   }
