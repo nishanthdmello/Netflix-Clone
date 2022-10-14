@@ -156,21 +156,6 @@ class Slide1 extends React.Component {
   }
 }
 
-// class FAQ extends React.Component {
-//   render() {
-//     return (
-//       <div style={{ backgroundColor: "black" }}>
-//         <button>1. What is MFLIX?</button>
-//         <button>2. What plans can I choose?</button>
-//         <button>3. How many devices can I use this on?</button>
-//         <button>4. When can I cancel my Subscription</button>
-//         <button>
-//           5. Are there any hidden charges for deleting my subscription?
-//         </button>
-//       </div>
-//     );
-//   }
-// }
 
 class FAQ extends React.Component {
   render() {
