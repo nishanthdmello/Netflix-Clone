@@ -3,6 +3,7 @@ import mflixlogo from "./resources/Mflix_Brand_Logo2.png";
 import sl1_bg from "./resources/netflix_sl1_bg.jpg";
 import netflix_on_tv from "./resources/netflix_on_tv.gif";
 import netflix_children_profiles from "./resources/netflix_children_profiles.png";
+import "./FAQ.css";
 import "./style.css";
 
 class NavBar extends React.Component {
@@ -155,21 +156,47 @@ class Slide1 extends React.Component {
   }
 }
 
+// class FAQ extends React.Component {
+//   render() {
+//     return (
+//       <div style={{ backgroundColor: "black" }}>
+//         <button>1. What is MFLIX?</button>
+//         <button>2. What plans can I choose?</button>
+//         <button>3. How many devices can I use this on?</button>
+//         <button>4. When can I cancel my Subscription</button>
+//         <button>
+//           5. Are there any hidden charges for deleting my subscription?
+//         </button>
+//       </div>
+//     );
+//   }
+// }
+
 class FAQ extends React.Component {
   render() {
     return (
-      <div style={{ backgroundColor: "black" }}>
-        <button>1. What is MFLIX?</button>
-        <button>2. What plans can I choose?</button>
-        <button>3. How many devices can I use this on?</button>
-        <button>4. When can I cancel my Subscription</button>
-        <button>
-          5. Are there any hidden charges for deleting my subscription?
-        </button>
+      <div id="FAQ">
+        <h1>Freuently Asked Questions</h1>
+        <br />
+        <br />
+        <center>
+          <button>1. What is MFLIX?</button>
+          <br />
+          <button>2. What plans can I choose?</button>
+          <br />
+          <button>3. How many devices can I use this on?</button>
+          <br />
+          <button>4. When can I cancel my Subscription</button>
+          <br />
+          <button>
+            5. Are there any hidden charges for deleting my subscription?
+          </button>
+        </center>
       </div>
     );
   }
 }
+
 
 class Divider extends React.Component {
   render() {
