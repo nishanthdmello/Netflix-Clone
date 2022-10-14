@@ -3,7 +3,7 @@
   padding: 0px;
 }
 @import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap");
-#FAQ div {
+#FAQ{
   background-image: url("resources/bg5.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
