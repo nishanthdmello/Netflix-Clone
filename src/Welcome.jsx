@@ -176,7 +176,7 @@ class FAQ extends React.Component {
   render() {
     return (
       <div id="FAQ">
-        <h1>Freuently Asked Questions</h1>
+        <h1>Frequently Asked Questions</h1>
         <br />
         <br />
         <center>
