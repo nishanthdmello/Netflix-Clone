@@ -58,18 +58,16 @@ class WelcomeSlide extends React.Component {
   style_button = {
     backgroundColor: "#db4dce",
     color: "white",
-    // display: "inline-block",
     width: "130px",
-    marginLeft:"30px",
+    marginLeft: "30px",
     height: "50px",
     borderRadius: "10px",
   };
-  style_center={
-    position:"absolute",
-    marginLeft:"445px",
-    marginTop:"-445px"
-
-  }
+  style_center = {
+    position: "absolute",
+    marginLeft: "445px",
+    marginTop: "-445px",
+  };
   render() {
     return (
       <div style={{ backgroundColor: "#3f053a" }}>
@@ -80,7 +78,8 @@ class WelcomeSlide extends React.Component {
             can <br />
             watch from anywhere anytime. Cancel Subscription when you want to.
           </p>
-          <br /><br />
+          <br />
+          <br />
 
           <input
             type="email"
@@ -101,11 +100,9 @@ class Slide extends React.Component {
     return (
       <div
         style={{
-          // display: "inline-block",
           height: "350px",
           backgroundColor: "black",
-        }}
-      >
+        }}>
         <img src={netflix_on_tv} alt="demo pic" />
         <p
           style={{
@@ -118,8 +115,7 @@ class Slide extends React.Component {
             fontSize: "30px",
             fontFamily:
               "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
-          }}
-        >
+          }}>
           Watch your favourite Movies and TV Shows on your big screen
         </p>
       </div>
@@ -133,10 +129,8 @@ class Slide1 extends React.Component {
       <div
         style={{
           backgroundColor: "black",
-          // display: "inline-block",
           height: "450px",
-        }}
-      >
+        }}>
         <img
           src={netflix_children_profiles}
           alt="demo pic"
@@ -152,8 +146,7 @@ class Slide1 extends React.Component {
             fontSize: "30px",
             fontFamily:
               "Netflix Sans,Helvetica Neue,Helvetica,Arial,sans-serif",
-          }}
-        >
+          }}>
           Create Profiles for Kids and set them free to play and explore in
           entertainment made for them
         </p>
@@ -161,17 +154,6 @@ class Slide1 extends React.Component {
     );
   }
 }
-
-// class FAQButton extends React.Component {
-//   render() {
-//     const faqb = {};
-//     return (
-//       <div>
-//         <button style={faqb}>{this.props.children}</button>
-//       </div>
-//     );
-//   }
-// }
 
 class FAQ extends React.Component {
   render() {
