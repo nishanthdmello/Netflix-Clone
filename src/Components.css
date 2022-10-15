@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap");
+#FAQ {
+  background-image: url("resources/bg5.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#FAQ button {
+  width: 700px;
+  height: 70px;
+  font-size: 23px;
+  text-align: left;
+  padding-left: 15px;
+  margin: 5px 0;
+  background-color: pink;
+  border-radius: 10px;
+  font-family: "Fuzzy Bubbles", cursive;
+}
+#FAQ h1 {
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 60px;
+  color: #ff4cf8;
+}
