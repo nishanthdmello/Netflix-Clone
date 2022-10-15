@@ -1,24 +1,27 @@
 import ReactDOM from "react-dom/client";
-import {
-  NavBar,
-  WelcomeSlide,
-  Slide,
-  Divider,
-  Slide1,
-  FAQ,
-} from "./Components";
+import {BrowserRouter as Router} from 'react-router-dom';
+// import {
+//   NavBar,
+//   WelcomeSlide,
+//   Slide,
+//   Divider,
+//   Slide1,
+//   FAQ,
+// } from "./Components";
+import NavBar from "./Components"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <div>
-    <NavBar />
+  <Router>
+    {/* <NavBar />
     <WelcomeSlide />
     <Divider />
     <Slide />
     <Divider />
     <Slide1 />
     <Divider />
-    <FAQ />
-  </div>
+    <FAQ /> */}
+    <NavBar/>
+  </Router>
 );

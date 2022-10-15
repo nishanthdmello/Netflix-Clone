@@ -1,40 +1,76 @@
 import React from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+// import Login from "./Login";
+import logo from "./images/logo.png";
+
 import "./Components.css";
 import mflixlogo from "./resources/Mflix_Brand_Logo2.png";
 import sl1_bg from "./resources/netflix_sl1_bg.jpg";
 import netflix_on_tv from "./resources/netflix_on_tv.gif";
 import netflix_children_profiles from "./resources/netflix_children_profiles.png";
 
-class NavBar extends React.Component {
-  style_div = {
-    position: "fixed",
-    display: "grid",
-    background: "#222222",
-    width: "100%",
-    height: "90px",
-    zIndex: "5",
+// ############################################################
+
+export default function NavBar() {
+  const navigate = useNavigate();
+  const navigateToLogin = () => {
+    navigate("/login");
   };
-  style_img = {
-    height: "70%",
+  const navigateHome = () => {
+    navigate("/");
   };
-  style_button = {
-    backgroundColor: "#db4dce",
-    color: "white",
-    width: "100px",
-    height: "40px",
-    borderRadius: "5px",
-    position: "absolute",
-    margin: "20px",
-    right: "20px",
-  };
-  render() {
-    return (
-      <div style={this.style_div}>
-        <img src={mflixlogo} alt="logo" style={this.style_img} />
-        <button style={this.style_button}>Sign In</button>
-      </div>
-    );
-  }
+
+  return (
+    <div
+      id="Navbar"
+      style={{
+        // position: "fixed",
+        // display: "grid",
+        background: "#222222",
+        // width: "100%",
+        height: "90px",
+      }}>
+      <img
+        src={mflixlogo}
+        alt="logo"
+        onClick={navigateHome}
+        style={{ height: "70%" }}
+      />
+      <button
+        onClick={navigateToLogin}
+        style={{
+          backgroundColor: "#db4dce",
+          color: "white",
+          width: "100px",
+          height: "40px",
+          borderRadius: "5px",
+          position: "absolute",
+          margin: "20px",
+          right: "20px",
+        }}>
+        Sign In
+      </button>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      <WelcomeSlide />
+      <Divider />
+      <Slide />
+      <Divider />
+      <Slide1 />
+      <Divider />
+      <FAQ />
+    </div>
+  );
+  // }
 }
 
 class WelcomeSlide extends React.Component {
@@ -186,4 +222,38 @@ class Divider extends React.Component {
   }
 }
 
-export { NavBar, Divider, WelcomeSlide, Slide, Slide1, FAQ };
+function Login() {
+  return (
+    <div id="login">
+      <form>
+        <h3 className="title">Sign In</h3>
+        <div className="input_container">
+          <input
+            type="text"
+            name="username"
+            required
+            autoFocus
+            autoComplete="off"
+            placeholder="Email"
+          />
+          <p className="invalid_username">Invalid Email</p>
+          <input
+            type="password"
+            name="password"
+            required
+            placeholder="Password"
+          />
+          <a className="forgot_password" href="App1.jsx">
+            Forgot Password ?
+          </a>
+          <p className="invalid_password">Invalid Password</p>
+        </div>
+        <div className="button_container">
+          <button className="sign_in_button">Sign In</button>
+          <p className="no_account">Don't have an account ?</p>
+          <button className="sign_up_button">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  );
+}
