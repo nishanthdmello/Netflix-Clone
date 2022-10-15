@@ -1,5 +1,12 @@
 import ReactDOM from "react-dom/client";
-import { NavBar, WelcomeSlide, Slide, Divider, Slide1, FAQ } from "./Welcome";
+import {
+  NavBar,
+  WelcomeSlide,
+  Slide,
+  Divider,
+  Slide1,
+  FAQ,
+} from "./Components";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
