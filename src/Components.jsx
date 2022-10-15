@@ -1,15 +1,11 @@
 import React from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-// import Login from "./Login";
-import logo from "./images/logo.png";
-
 import "./Components.css";
 import mflixlogo from "./resources/Mflix_Brand_Logo2.png";
 import sl1_bg from "./resources/netflix_sl1_bg.jpg";
 import netflix_on_tv from "./resources/netflix_on_tv.gif";
 import netflix_children_profiles from "./resources/netflix_children_profiles.png";
 
-// ############################################################
 
 export default function NavBar() {
   const navigate = useNavigate();
