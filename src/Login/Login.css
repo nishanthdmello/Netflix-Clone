@@ -1,0 +1,63 @@
+#login input {
+    height: 60px;
+    width: 300px;
+    padding-left:20px;
+    border: 0px ;
+    background-color: rgb(236, 162, 255);
+    font-size: large;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  #login button {
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgba(134, 206, 211, 0.801);
+    color: rgba(255, 255, 255, 0.788);
+    padding: 12px 40px;
+    border-radius: 10px;
+  }
+  #parent_login {
+    background-image: url("/home/nishanth/wt_project/src/images/bg5.jpg");
+    background-size: 100vw;
+    height: 85vh;
+    padding-top: 5vh;
+  }
+  #login  {
+    background-color: rgba(195, 65, 255, 0.295);
+    height: 530px;
+    width: 400px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+  }
+  .no_account,
+  .forgot_password {
+    font-size: 18px;
+    color: #3f053a;
+    margin-top: 35px;
+  }
+  .forgot_password {
+    margin-left: 200px;
+  }
+  .title {
+    font-size: 30px;
+    color: #3f053a;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-left: -220px;
+  }
+  #login p {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+  }
+  .invalid_username,
+  .invalid_password {
+    visibility: hidden;
+    margin-left: -170px;
+  }
+  .invalid_password {
+    margin-top: -20px;
+  }
+  .button_container {
+    margin-top: 40px;
+  }
