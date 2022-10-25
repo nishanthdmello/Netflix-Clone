@@ -8,13 +8,13 @@
   #navbar button {
     cursor: pointer;
     background-color: rgba(134, 206, 211, 0.801);
-    color: rgba(255, 255, 255, 0.788);
     color: white;
     width: 100px;
     height: 6vh;
-    border-radius: 5px;
-    /* border-width: 0px; */
+    border-radius: 10px;
     position: absolute;
+    font-size: large;
+    border-width: 1px;
     right: 2vh;
     top: 2vh;
   }

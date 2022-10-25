@@ -1,18 +1,20 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./HomePage/Home";
-import Navbar from "./Navbar/Navbar";
 import Login from "./Login/Login";
 import SignUp from "./SignUp/SignUp";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import Plans from "./Plans/Plans";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
-  <div>
-    <Navbar />
-    <Home />
-  </div>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/forgot" element={<ForgotPassword />} />
+      <Route path="/plans" element={<Plans />} />
+    </Routes>
+  </Router>
 );

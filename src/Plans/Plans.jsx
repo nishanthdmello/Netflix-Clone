@@ -1,5 +1,6 @@
 import React from "react";
-// import "./Plans.css";
+import "./Plans.css";
+import Navbar from "../Navbar/Navbar";
 
 class Plans extends React.Component {
   render() {
@@ -107,4 +108,11 @@ class Plans extends React.Component {
   }
 }
 
-export default Plans;
+export default function Plans1(){
+  return(
+    <div>
+      <Navbar/>
+      <Plans/>
+    </div>
+  )
+};

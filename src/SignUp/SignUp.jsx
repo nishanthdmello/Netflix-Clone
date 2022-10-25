@@ -1,8 +1,12 @@
-import React, { Component } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../Navbar/Navbar";
 import "./SignUp.css";
 
-class CreateAcc extends Component {
-  render() {
+function CreateAcc() {
+  const navigate = useNavigate();
+  const navigateToPlans = () => {
+    navigate("/plans");
+  };
     return (
       <div id="signup">
         <div id="signup_form">
@@ -35,11 +39,18 @@ class CreateAcc extends Component {
             <br />
             <br />
             <br />
-            <button>Sign Up</button>
+            <button onClick={navigateToPlans}>Sign Up</button>
             </center>
         </div>
       </div>
     );
-  }
 }
-export default CreateAcc;
+function SignUp(){
+  return (
+    <div>
+    <Navbar/>
+    <CreateAcc/>
+    </div>
+  )
+}
+export default SignUp;
