@@ -1,5 +1,5 @@
 import "./Slide1.css";
-import netflix_children_profiles from "/home/nishanth/wt_project-1/src/images/netflix_children_profiles.png";
+import netflix_children_profiles from "../../images/netflix_children_profiles.png";
 export default function Slide1() {
   return (
     <div className="slide1">

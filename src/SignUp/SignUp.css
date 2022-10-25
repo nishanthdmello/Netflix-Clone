@@ -1,20 +1,21 @@
 #signup {
     background-color: rgb(100, 3, 156);
-    background-image: url("/home/nishanth/wt_project/src/images/bg5.jpg");
+    background-image: url("../images/bg5.jpg");
     background-size: 100vw;
-    height: 82vh;
-    padding-top: 8vh;
+    height: 85vh;
+    padding-top: 5vh;
   }
   #signup_form {
-    background-color: rgba(253, 155, 245, 0.329);
+    background-color: rgba(195, 65, 255, 0.295);
     border-radius: 15px;
     width: fit-content;
-    height: 500px;
+    height: 530px;
     padding: 0 40px;
     margin: auto;
   }
   #signup_form h1 {
-    font-size: 35px;
+    padding-top: 25px;
+    font-size: 30px;
     color: #3f053a;
   }
   #signup_form text {

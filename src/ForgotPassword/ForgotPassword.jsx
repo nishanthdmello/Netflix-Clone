@@ -1,5 +1,6 @@
 import "./ForgotPassword.css";
 import React from "react";
+import Navbar from "../Navbar/Navbar";
 
 class ForgotPassword extends React.Component {
   render() {
@@ -30,4 +31,11 @@ class ForgotPassword extends React.Component {
     );
   }
 }
-export default ForgotPassword;
+export default function Forgot() {
+  return (
+    <div>
+      <Navbar />
+      <ForgotPassword />
+    </div>
+  );
+}

@@ -10,34 +10,35 @@
 
 .welcome input {
   width: 400px;
-  height: 48px;
+  height: 60px;
   padding: 0px 20px;
-  border-radius: 5px 0 0 5px;
-  font-size: 18px;
+  border-radius: 10px 0 0 10px;
+  font-size: large;
+  background-color: rgb(236, 162, 255);
   border-width: 0px;
 }
 
 .welcome button {
-  background-color: #db4dce;
+  background-color: rgb(131, 32, 224);
   cursor: pointer;
   color: white;
-  font-size: 18px;
+  font-size: large;
   width: 130px;
   margin-left: 0px;
-  height: 48px;
-  border-radius: 0 5px 5px 0;
+  height: 60px;
+  border-radius: 0 10px 10px 0;
   border-width: 0px;
 }
 
 .welcome {
-  background-image: url("/home/nishanth/wt_project-1/src/images/netflix_sl1_bg.jpg");
+  background-image: url("../../images/netflix_sl1_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 760px;
 }
 .welcome center {
-  background-color: rgba(128, 0, 128, 0.418);
+  background-color: rgba(105, 14, 138, 0.418);
   height: 760px;
   padding-top: 200px;
 }
