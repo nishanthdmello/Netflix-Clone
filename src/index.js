@@ -6,6 +6,8 @@ import Login from "./Login/Login";
 import SignUp from "./SignUp/SignUp";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import Plans from "./Plans/Plans";
+import FAQpage from "./FAQpage/FAQpage";
+import Contact from "./Contact/Contact";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -15,6 +17,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/signup" element={<SignUp />} />
       <Route path="/forgot" element={<ForgotPassword />} />
       <Route path="/plans" element={<Plans />} />
+      <Route path="/FAQ" element={<FAQpage/>}/>
+      <Route path="/Contact" element={<Contact/>}/>
     </Routes>
   </Router>
 );

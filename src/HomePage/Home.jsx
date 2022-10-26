@@ -4,6 +4,7 @@ import Slide from "./Slide/Slide";
 import Slide1 from "./Slide1/Slide1";
 import FAQ from "./FAQ/FAQ";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 function Home() {
   return (
     <div>
@@ -15,6 +16,7 @@ function Home() {
       <Slide1 />
       <Divider />
       <FAQ />
+      <Footer />
     </div>
   );
 }
