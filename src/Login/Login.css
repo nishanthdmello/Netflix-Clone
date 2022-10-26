@@ -34,9 +34,13 @@
 .forgot_password {
   font-size: 18px;
   color: #41073c;
-  margin-top: 35px;
+}
+.no_account{
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .forgot_password {
+  margin-top: 10px;
   cursor: pointer;
   margin-left: 200px;
   text-decoration: underline;
