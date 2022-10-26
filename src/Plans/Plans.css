@@ -1,0 +1,14 @@
+.planpage {
+    padding: 10vh;
+}
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table th {
+    border: 1px solid black;
+    background-color: grey;
+}
+table td {
+    border: 1px solid black;
+}
