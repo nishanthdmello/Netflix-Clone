@@ -1,14 +1,42 @@
+*{
+    padding: 0%;
+    margin:0%;
+}
 .planpage {
-    padding: 10vh;
+    /* padding: 0%; */
+}
+center .info{
+    color:red;
 }
 table {
     border: 1px solid black;
+    width:100%;
     border-collapse: collapse;
+    background-color: hotpink;
+}
+table caption{
+    height:2rem;
+    font-size:large;
+    margin-top:0;
 }
 table th {
-    border: 1px solid black;
-    background-color: grey;
+    /* border: 1px solid black; */
+    height:5vh;
+    background-color: darkmagenta;
+    font-size: large;
 }
 table td {
-    border: 1px solid black;
+    height:20vh;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+table caption{
+    background-color: black;
+    color:purple;
+}
+.navbar{
+    /* position: fixed; */
+    width:100vw;
 }
