@@ -108,9 +108,10 @@ export default function Plans1() {
       <div className="navbar">
         <Navbar />
       </div>
-      <br />
       <Plans />
-      <Footer />
+      <div style={{ position: "absolute", bottom: "0px", width: "100vw", }}>
+        <Footer />
+      </div>
     </div>
   );
 }
