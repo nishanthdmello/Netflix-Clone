@@ -10,7 +10,7 @@ center .info{
 }
 table {
     border: 1px solid black;
-    width:100%;
+    /* width:100%; */
     border-collapse: collapse;
     background-color: hotpink;
 }
@@ -26,7 +26,7 @@ table th {
     font-size: large;
 }
 table td {
-    height:20vh;
+    height:10vh;
     border: 1px solid white;
     background-color: black;
     color: white;
