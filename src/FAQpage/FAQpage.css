@@ -1,0 +1,29 @@
+.table1,
+.table2 {
+  border-width: 30px;
+}
+
+.table1 p,
+h1 {
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.table2 h1,
+p {
+  padding-left: 30px;
+}
+
+#main {
+  background-color: black;
+}
+
+#main p,
+h1,
+h3 {
+  color: white;
+}
+tr {
+  border-color: black;
+  border-width: 2px;
+}
