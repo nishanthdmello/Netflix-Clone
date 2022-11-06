@@ -1,56 +1,71 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./SignUp.css";
+import React, { useState } from "react";
 
 function CreateAcc() {
   const navigate = useNavigate();
   const navigateToPlans = () => {
     navigate("/plans");
   };
-    return (
-      <div id="signup">
-        <div id="signup_form">
-            <br />
-          <h1 >Sign Up</h1>
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
+  return (
+    <div id="signup">
+      <div id="signup_form">
+        <br />
+        <h1>Sign Up</h1>
+        <br />
+        <center>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            autoComplete="off"
+            required
+            autofocus
+            value={username}
+            onChange={(event) => setUsername(event.target.value)}
+          />
+          {/* {username} */}
           <br />
-          <center>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              autoComplete="off"
-              required
-              autofocus
-            />
-            <br />
-            <input
-              type="password"
-              name="password"
-              placeholder="Create Password"
-              required
-            />
-            <br />
-            <input
-              type="password"
-              name="password"
-              placeholder="Confirm Password"
-              required
-            />
-            <br />
-            <br />
-            <br />
-            <button onClick={navigateToPlans}>Sign Up</button>
-            </center>
-        </div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Create Password"
+            required
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          {/* {password} */}
+          <br />
+          <input
+            type="password"
+            name="password"
+            placeholder="Confirm Password"
+            required
+            value={confirm}
+            onChange={(event) => setConfirm(event.target.value)}
+          />
+          <br />
+          {/* {confirm} */}
+          <br />
+          <br />
+          <button onClick={navigateToPlans}>Sign Up</button>
+        </center>
       </div>
-    );
+    </div>
+  );
 }
-function SignUp(){
+function SignUp() {
   return (
     <div>
-    <Navbar/>
-    <CreateAcc/>
+      <Navbar />
+      <CreateAcc />
     </div>
-  )
+      
+  );
 }
 export default SignUp;
