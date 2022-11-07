@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Login.css";
+import {useState} from "react";
 
 function Login() {
   const navigate = useNavigate();
@@ -10,6 +11,8 @@ function Login() {
   const navigateToForgotPassword = () => {
     navigate("/forgot");
   };
+  const [username1, setUsername1] = useState("");
+  const [password1, setPassword1] = useState("");
   return (
     <div id="parent_login">
       <div id="login">
@@ -22,6 +25,8 @@ function Login() {
               autoFocus
               autoComplete="off"
               placeholder="Email"
+              value={username1}
+              onChange={event=>setUsername1(event.target.value)}
             />
             <p className="invalid_username">Invalid Email</p>
             <input
@@ -29,6 +34,8 @@ function Login() {
               name="password"
               required
               placeholder="Password"
+              value={password1}
+              onChange={event=>setPassword1(event.target.value)}
             />
             <p className="forgot_password" onClick={navigateToForgotPassword}>
               Forgot Password ?
