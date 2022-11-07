@@ -1,19 +1,14 @@
-.table1,
-.table2 {
-  border-width: 30px;
+.d1 {
+  display: flex;
 }
 
-.table1 p,
-h1 {
-  padding-right: 30px;
-  padding-left: 10px;
+.text,
+.img {
+  margin: 0 40px;
 }
-
-.table2 h1,
-p {
-  padding-left: 30px;
+.text {
+  padding-top: 9vh;
 }
-
 #main {
   background-color: black;
 }
@@ -23,7 +18,12 @@ h1,
 h3 {
   color: white;
 }
-tr {
-  border-color: black;
-  border-width: 2px;
+
+/* .center{
+  display: flex;
 }
+.center p{
+  align-self:flex-start;
+
+} */
+

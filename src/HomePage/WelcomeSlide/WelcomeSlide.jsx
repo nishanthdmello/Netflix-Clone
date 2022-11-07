@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import "./WelcomeSlide.css";
+import {useState} from "react";
 
-export default function WelcomeSlide() {
+ function WelcomeSlide() {
+  const[welcomeEmail,setWelcomeEmail]=useState("");
   const navigate = useNavigate();
   const navigateToSignUp = () => {
     navigate("/signup");
@@ -17,9 +19,13 @@ export default function WelcomeSlide() {
         </p>
         <br />
         <br />
-        <input type="email" placeholder="Enter your email address" />
+        <input type="email" placeholder="Enter your email address" value={welcomeEmail} onChange={(event)=>setWelcomeEmail(event.target.value)}/>
+        {/* {welcomeEmail} */}
         <button onClick={navigateToSignUp}>Sign Up</button>
       </center>
     </div>
   );
 }
+
+
+export default WelcomeSlide;
