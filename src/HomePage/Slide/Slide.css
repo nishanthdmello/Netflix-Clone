@@ -1,14 +1,14 @@
 .slide {
-    height: 350px;
-    background-color: black;
-  }
-  
-  .slide p {
-    color: white;
-    position: absolute;
-    padding: 100px;
-    display: inline-block;
-    margin-top: 60px;
-    font-size: 30px;
-    font-family: Netflix Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
+  height: 350px;
+  background-color: black;
+}
+
+.slide p {
+  color: white;
+  position: absolute;
+  padding: 100px;
+  display: inline-block;
+  margin-top: 60px;
+  font-size: 30px;
+  font-family: Netflix Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
