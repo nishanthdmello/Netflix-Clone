@@ -11,6 +11,9 @@ function Login() {
   const navigateToForgotPassword = () => {
     navigate("/forgot");
   };
+  const navigateToMovies = () => {
+    navigate("/Movies");
+  }
   const [username1, setUsername1] = useState("");
   const [password1, setPassword1] = useState("");
   return (
@@ -36,7 +39,7 @@ function Login() {
           value={password1}
           onChange={(event) => setPassword1(event.target.value)}
         />
-        <p className="invalid_password">Invalid Password</p>
+        <p className="invalid_password" onClick="navigateToMovies">Invalid Password</p>
         <p className="forgot_password" onClick={navigateToForgotPassword}>
           Forgot Password ?
         </p>
