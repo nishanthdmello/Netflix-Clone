@@ -9,11 +9,11 @@ import Footer from "../Footer/Footer";
 
 function FAQpage() {
   return (
-    <div id="main">
+    <div id="FAQ_page">
       <br />
       <br />
-      <div className="d1">
-        <div className="text">
+      <div className="outer_div">
+        <div className="text_div">
           <h1>What is Mflix?</h1>
           <br />
           <p>
@@ -28,17 +28,17 @@ function FAQpage() {
             shows.
           </p>
         </div>
-        <div className="img">
+        <div className="img_div">
           <img src={img1} alt="missing pic" style={{ width: "600px" }} />
         </div>
       </div>
       <br />
       <br />
-      <div className="d1">
-        <div className="img">
+      <div className="outer_div">
+        <div className="img_div">
           <img src={img2} alt="missing pic" />
         </div>
-        <div className="text">
+        <div className="text_div">
           <h1>Supported Devices</h1>
           <br />
           <p>
@@ -55,8 +55,8 @@ function FAQpage() {
       </div>
       <br />
       <br />
-      <div className="d1">
-        <div className="text">
+      <div className="outer_div">
+        <div className="text_div">
           <h1>Plans and Pricing</h1>
           <br />
           <p>
@@ -67,7 +67,7 @@ function FAQpage() {
             you. Remember you can cancel it online anytime.
           </p>
         </div>
-        <div className="img">
+        <div className="img_div">
           <img id="img3" src={img3} alt="missing pic" />
         </div>
       </div>
@@ -76,68 +76,28 @@ function FAQpage() {
       <br />
       <hr />
       <br />
-      {/* <center> */}
-        {/* <h3>Get Started!</h3> */}
-        {/* <img src={logo} alt="missing pic" style={{ width: "100px" }} /> */}
-        {/* <br /> */}
-        {/* <br /> */}
-        {/* <p>
-          Follow these easy steps to start watching on Mflix today:
-        </p>
+      <center>
+        <h3>Get Started!</h3>
+        <img src={logo} alt="missing pic" style={{ width: "100px" }} />
+      </center>
+      <div id="GetStarted">
+        <br />
+        <p>Follow these steps to start watching on Mflix today:</p>
         <br />
         <ol>
-          <li>Visit <a href="/signup">Sign Up.</a></li>
-          <li><a href="/plans">Choose the plan</a> that's right for you.</li>
-          <li></li>
-        </ol> */}
-        <center>
-          <h3>Get Started!</h3>
-          <img src={logo} alt="missing pic" style={{ width: "100px" }} />
-        </center>
-        <div id="GetStarted">
-          <br />
-          <p>Follow these steps to start watching on Mflix today:</p>
-          <br />
-          <ol>
-            <li>Visit <a href="/signup">Sign Up.</a></li>
-            <li><a href="/plans">Choose the plan</a> that's right for you.</li>
-            <li>
-            Enter a payment method. As a Mflix member, you are charged
-              once a month on the date you signed up on.
-            </li>
-            <li>That's it. Enjoy Mflix.</li>
-          </ol>
-        </div>
-
-        {/* <table>
-          <tr>
-            <th>Follow these easy steps to start watching on Mflix today:</th>
-          </tr>
-          <br />
-          <tr>  
-            <td>
-              1. Visit <a href="/signup">Sign Up.</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              2. <a href="/plans">Choose the plan</a> that's right for you.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              3. Enter a payment method. As a Mflix member, you are charged <br />
-              once a month on the date you signed up on.
-            </td>
-          </tr>
-          <br />
-          <tr>
-            <td>
-              <b>That's it. Enjoy Mflix !</b>
-            </td>
-          </tr>
-        </table> */}
-      {/* </center> */}
+          <li>
+            Visit <a href="/signup">Sign Up.</a>
+          </li>
+          <li>
+            <a href="/plans">Choose the plan</a> that's right for you.
+          </li>
+          <li>
+            Enter a payment method. As a Mflix member, you are charged once a
+            month on the date you signed up on.
+          </li>
+          <li>That's it. Enjoy Mflix.</li>
+        </ol>
+      </div>
       <br />
       <br />
       <hr />

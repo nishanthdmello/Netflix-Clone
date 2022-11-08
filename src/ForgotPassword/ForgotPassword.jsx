@@ -1,13 +1,13 @@
 import "./ForgotPassword.css";
 import React from "react";
 import Navbar from "../Navbar/Navbar";
-import {useState} from "react";
+import { useState } from "react";
 
 function ForgotPassword() {
-  const[forgotPassword,setForgotPassword]=useState("");
+  const [forgotPassword, setForgotPassword] = useState("");
   return (
     <div id="forgotpassword">
-      <div id="form">
+      <form>
         <br />
         <br />
         <div id="text_container">
@@ -19,20 +19,23 @@ function ForgotPassword() {
           </p>
           <br />
           <br />
-          <br />
         </div>
         <center>
-          <input type="email" placeholder="name@example.com" value={forgotPassword} onChange={(event)=>setForgotPassword(event.target.value)}/>
+          <input
+            type="email"
+            placeholder="name@example.com"
+            value={forgotPassword}
+            onChange={(event) => setForgotPassword(event.target.value)}
+          />
           <br />
           <br />
           {/* {forgotPassword} */}
           <button>Email Me</button>
         </center>
-      </div>
+      </form>
     </div>
   );
 }
-
 
 export default function Forgot() {
   return (

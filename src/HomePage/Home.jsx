@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 function Home() {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <WelcomeSlide />
       <Divider />
       <Slide />
@@ -16,6 +16,7 @@ function Home() {
       <Slide1 />
       <Divider />
       <FAQ />
+      <hr />
       <Footer />
     </div>
   );

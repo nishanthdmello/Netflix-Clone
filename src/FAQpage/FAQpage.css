@@ -1,39 +1,26 @@
-.d1 {
+#FAQ_page {
+  color: white;
+  background-color: black;
+}
+
+#FAQ_page .outer_div {
   display: flex;
 }
 
-.text,
-.img {
+#FAQ_page .text_div,
+.img_div {
   margin: 0 40px;
 }
-.text {
+
+#FAQ_page .text_div {
   padding-top: 9vh;
 }
-#main {
-  background-color: black;
-}
 
-table{
-  background-color: black;
-}
-
-#main p,
-li,
-h1,
-h3 {
-  color: white;
-}
-
-#GetStarted {
+#FAQ_page #GetStarted {
   width: 30vw;
-  padding-left: 38vw;
+  padding-left: 36.5vw;
 }
 
-/* .center{
-  display: flex;
+#FAQ_page a {
+  color: rgb(0, 140, 255);
 }
-.center p{
-  align-self:flex-start;
-
-} */
-
