@@ -76,28 +76,68 @@ function FAQpage() {
       <br />
       <hr />
       <br />
-      <center>
-        <h3>Get Started!</h3>
-        <img src={logo} alt="missing pic" style={{ width: "100px" }} />
-        <br />
-        <br />
-        <p>Follow these easy steps to start watching on Mflix today:</p>
-        <br />
-        <p>
-          1. Visit <a href="/signup">Sign Up.</a>
-        </p>
-        <p>
-          2. <a href="/plans">Choose the plan</a> that's right for you.
-        </p>
-        <p>
-          3. Enter a payment method. As a Mflix member, you are charged <br />
-          once a month on the date you signed up on.
+      {/* <center> */}
+        {/* <h3>Get Started!</h3> */}
+        {/* <img src={logo} alt="missing pic" style={{ width: "100px" }} /> */}
+        {/* <br /> */}
+        {/* <br /> */}
+        {/* <p>
+          Follow these easy steps to start watching on Mflix today:
         </p>
         <br />
-        <p>
-          <b>That's it. Enjoy Mflix !</b>
-        </p>
-      </center>
+        <ol>
+          <li>Visit <a href="/signup">Sign Up.</a></li>
+          <li><a href="/plans">Choose the plan</a> that's right for you.</li>
+          <li></li>
+        </ol> */}
+        <center>
+          <h3>Get Started!</h3>
+          <img src={logo} alt="missing pic" style={{ width: "100px" }} />
+        </center>
+        <div id="GetStarted">
+          <br />
+          <p>Follow these steps to start watching on Mflix today:</p>
+          <br />
+          <ol>
+            <li>Visit <a href="/signup">Sign Up.</a></li>
+            <li><a href="/plans">Choose the plan</a> that's right for you.</li>
+            <li>
+            Enter a payment method. As a Mflix member, you are charged
+              once a month on the date you signed up on.
+            </li>
+            <li>That's it. Enjoy Mflix.</li>
+          </ol>
+        </div>
+
+        {/* <table>
+          <tr>
+            <th>Follow these easy steps to start watching on Mflix today:</th>
+          </tr>
+          <br />
+          <tr>  
+            <td>
+              1. Visit <a href="/signup">Sign Up.</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2. <a href="/plans">Choose the plan</a> that's right for you.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3. Enter a payment method. As a Mflix member, you are charged <br />
+              once a month on the date you signed up on.
+            </td>
+          </tr>
+          <br />
+          <tr>
+            <td>
+              <b>That's it. Enjoy Mflix !</b>
+            </td>
+          </tr>
+        </table> */}
+      {/* </center> */}
       <br />
       <br />
       <hr />

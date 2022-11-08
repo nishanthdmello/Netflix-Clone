@@ -13,10 +13,20 @@
   background-color: black;
 }
 
+table{
+  background-color: black;
+}
+
 #main p,
+li,
 h1,
 h3 {
   color: white;
+}
+
+#GetStarted {
+  width: 30vw;
+  padding-left: 38vw;
 }
 
 /* .center{
