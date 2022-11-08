@@ -44,7 +44,7 @@ function Login() {
           Forgot Password ?
         </p>
         <div className="button_container">
-          <button className="sign_in_button">Sign In</button>
+          <button className="sign_in_button" onClick={navigateToMovies}>Sign In</button>
           <p className="no_account">Don't have an account ?</p>
           <button className="sign_up_button" onClick={navigateToSignUp}>
             Sign Up

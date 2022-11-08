@@ -5,7 +5,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div>
+    <div className="contact_page">
       <h3>Call us:</h3>7892896964
       <br />
       <h3>Email us:</h3>nihaltm2002@gmail.com

@@ -12,10 +12,10 @@
   --font-raleway: "Raleway", sans-serif;
 }
 
-body {
+/* body {
   font-family: var(--font-roboto);
   background-color: #212426;
-}
+}  */
 
 .app {
   padding: 4rem;
@@ -23,9 +23,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #212426;
 }
 
-h1 {
+.app h1 {
   font-size: 3rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
