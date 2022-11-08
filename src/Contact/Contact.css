@@ -1,6 +1,12 @@
-h3 {
-    color:white;
+.contact_page h3 {
+  color: white;
 }
-.contact_page, a {
-    color: aqua;
+.contact_page,
+a {
+  color: aqua;
+}
+
+.contact_page {
+  background-color: black;
+  height:81vh;
 }
