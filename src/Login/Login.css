@@ -8,6 +8,7 @@
   border-radius: 5px;
   margin: 10px;
 }
+
 #login button {
   cursor: pointer;
   font-size: 20px;
@@ -16,54 +17,60 @@
   padding: 12px 40px;
   border-radius: 10px;
 }
-#parent_login {
+
+#login {
   background-image: url("../images/bg5.jpg");
   background-size: 100vw;
   height: 85vh;
   padding-top: 5vh;
 }
-#login {
-  background-color: rgba(195, 65, 255, 0.295);
+
+#login form {
+  background-color: rgba(195, 65, 255, 0.3);
   height: 530px;
   width: 400px;
   border-radius: 10px;
   margin: auto;
   text-align: center;
 }
-.no_account,
+
+#login .no_account,
 .forgot_password {
   font-size: 18px;
   color: #41073c;
 }
-.no_account{
+
+#login .no_account {
   margin-top: 30px;
   margin-bottom: 10px;
 }
-.forgot_password {
-  margin-top: 10px;
+
+#login .forgot_password {
+  margin-top: -10px;
   cursor: pointer;
   margin-left: 200px;
   text-decoration: underline;
 }
-.title {
+
+#login .title {
   font-size: 30px;
   color: #3f053a;
   padding-top: 30px;
   padding-bottom: 10px;
   margin-left: -220px;
 }
+
 #login p {
-  color: rgb(0, 0, 0);
+  color: rgb(45, 7, 56);
   font-size: 18px;
 }
-.invalid_username,
+
+#login .invalid_username,
 .invalid_password {
   visibility: hidden;
   margin-left: -170px;
 }
-.invalid_password {
-  margin-top: -20px;
-}
-.button_container {
-  margin-top: 40px;
+
+#login .button_container {
+  margin-top: 30px;
 }

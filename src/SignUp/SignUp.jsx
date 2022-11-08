@@ -14,7 +14,7 @@ function CreateAcc() {
   const [confirm, setConfirm] = useState("");
   return (
     <div id="signup">
-      <div id="signup_form">
+      <form id="signup_form">
         <br />
         <h1>Sign Up</h1>
         <br />
@@ -25,7 +25,7 @@ function CreateAcc() {
             placeholder="Username"
             autoComplete="off"
             required
-            autofocus
+            autoFocus
             value={username}
             onChange={(event) => setUsername(event.target.value)}
           />
@@ -55,7 +55,7 @@ function CreateAcc() {
           <br />
           <button onClick={navigateToPlans}>Sign Up</button>
         </center>
-      </div>
+      </form>
     </div>
   );
 }
@@ -65,7 +65,6 @@ function SignUp() {
       <Navbar />
       <CreateAcc />
     </div>
-      
   );
 }
 export default SignUp;
