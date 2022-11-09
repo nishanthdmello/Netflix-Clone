@@ -33,4 +33,5 @@
 
 #FAQ .faq_btn:hover .faq_drp_dwn {
   display: contents;
+  transform: translateY(-20px);
 }
