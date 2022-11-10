@@ -6,13 +6,33 @@ import "./Contact.css";
 function Contact() {
   return (
     <div className="contact_page">
-      <h3>Call us:</h3>7892896964
+      <h3>Call us:</h3>
       <br />
-      <h3>Email us:</h3>nihaltm2002@gmail.com
       <br />
-      <h3>Instagram:</h3><a href="https://www.instagram.com/nihalmurthy10/" target="_blank" rel="noreferrer">Nihal T M</a>
+      <p>Nihal:7892896964</p>
+      <p>Nishanth:7676034782</p>
+      <p>Digvijay:9353717275</p>
       <br />
-      <h3>Twitter:</h3><a href="https://twitter.com/Nihal32327127/" target="_blank" rel="noreferrer">Nihal T M</a>
+      <br />
+      <h3>Email us:</h3>
+      <p>nihaltm2002@gmail.com</p>
+      <p>nishanthdmello2003@gmail.com</p>
+      <p>digvijayn1993@gmail.com</p>
+      <br />
+      <h3>socials</h3>
+      <a href="https://www.instagram.com/nihalmurthy10/" target="_blank" rel="noreferrer">Nihal T M</a>
+      <br />
+      <a href="https://www.instagram.com/chessticles_02/" target="_blank" rel="noreferrer">Digvijay</a>
+      <br />
+      <br />
+      <a href="https://twitter.com/Nihal32327127/" target="_blank" rel="noreferrer">Nihal T M</a>
+      <br />
+      <br />
+      <a href="https://github.com/n1haldev">Nihal</a>
+      <br />
+      <a href="https://github.com/ndigvijay">Digvijay</a>
+      <br />
+      <a href="https://github.com/nishanthdmello">Nishanth</a>
     </div>
   );
 }
