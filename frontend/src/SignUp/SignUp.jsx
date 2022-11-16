@@ -2,19 +2,31 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./SignUp.css";
 import React, { useState } from "react";
+import axios from "axios";
 
 function CreateAcc() {
   const navigate = useNavigate();
   const navigateToPlans = () => {
     navigate("/plans");
   };
+function submitHandler(e){
+  e.preventDefault()
+  const user={
+    username:username,
+    password:password,
+    confirm:confirm
+  }
+  axios.post("http://localhost:4000/app/signup",user)
+  navigateToPlans()
+  console.log(user)
+}
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   return (
     <div id="signup">
-      <form id="signup_form">
+      <form id="signup_form" onSubmit={submitHandler}>
         <br />
         <h1>Sign Up</h1>
         <br />
@@ -53,7 +65,7 @@ function CreateAcc() {
           {/* {confirm} */}
           <br />
           <br />
-          <button onClick={navigateToPlans}>Sign Up</button>
+          <button >Sign Up</button>
         </center>
       </form>
     </div>

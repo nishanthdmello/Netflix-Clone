@@ -6,7 +6,10 @@ const users=new schema({
       },
       password:{
         type: String,
-      }
+      },
+    confirm_password:{
+        type: String,
+    }
 })
 module.exports = mongoose.model("users1",users);
 
