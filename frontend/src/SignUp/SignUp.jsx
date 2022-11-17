@@ -14,7 +14,7 @@ function submitHandler(e){
   const user={
     username:username,
     password:password,
-    confirm:confirm
+    confirm_password:confirm
   }
   axios.post("http://localhost:4000/app/signup",user)
   navigateToPlans()
