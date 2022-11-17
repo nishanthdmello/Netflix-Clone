@@ -8,6 +8,7 @@ const cors=require('cors')
 
 dotenv.config()
 // console.log(process.env.DATABASE_URL)
+// console.log(process)
 mongoose.connect(process.env.DATABASE_URL,()=>console.log("database conected"))
 
 app.use(express.json())
