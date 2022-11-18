@@ -11,6 +11,9 @@ const users=new schema({
         type: String,
     }
 })
+
+
+
 module.exports = mongoose.model("users1",users);
 
 

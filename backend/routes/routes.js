@@ -1,18 +1,76 @@
-const express=require('express')
-const router =express.Router()
-const signup=require("../models/users")
+const { application } = require("express");
+const express = require("express");
+const router = express.Router();
+const signup = require("../models/users");
+let value=0;
+var user
 
-router.post("/signup",(req,res)=>{
-    const signedUpUser=new signup({
-        username:req.body.username,
-        password:req.body.password,
-        confirm_password:req.body.confirm_password,
-    })
-    signedUpUser.save()
-    .then(data=>res.json(data))
+//  function run(username, password) {
+//   try {
+//     user = signup.find({ username:username});
+//     console.log(user)
+// }
+// catch (e) {
+//     console.log(e.message);
+// }
+//     if(user.username===username && user.password===password)
+//         return 1;
+//     else if(user.username==username && user.password!=password)
+//         console.log("invalid password")
+//     else if(user.username!=username)
+//         console.log("user not found")
+// }
+
+router.post("/signup", (req, res) => {
+  const signedUpUser = new signup({
+    username: req.body.username,
+    password: req.body.password,
+    confirm_password: req.body.confirm_password,
+  });
+  signedUpUser
+    .save()
+    .then((data) => res.json(data))
     // .then(data=>console.log(data))
-    .catch(err=>console.log(err))
-    console.log(signedUpUser)
+    .catch((err) => console.log(err));
+  console.log(signedUpUser);
+});
+
+router.post("/login", async (req, res) => {
+  try {
+    const username = req.body.username;
+    const password = req.body.username;
+        user =  await signup.find({ username:username});
+          if(user.length!=0)
+              value=1;
+          else
+            value=0;
+          console.log(value) 
+    }
+    catch (e) {
+        console.log(e.message);
+    }
 })
 
-module.exports=router
+router.get("/login",(req,res)=>{
+  res.send("login page")
+})
+//   console.log(username,password)
+
+
+  // run(username, password,value).then()
+  // console.log(user)
+
+//   if(res==1)
+//     res.send("welcome")
+//     else if(res==2)
+//     res.send("incorrect password")
+//     else if(res==3)
+//     res.send("user not found")
+// });
+
+
+ 
+
+
+
+module.exports = router;
