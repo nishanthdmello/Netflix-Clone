@@ -1,21 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import "./WelcomeSlide.css";
-import {useState} from "react";
 
  function WelcomeSlide() {
-  const[welcomeEmail,setWelcomeEmail]=useState("");
   const navigate = useNavigate();
   const navigateToSignUp = () => {
     navigate("/signup");
   };
-
-  // function sendEmail(e) {
-  // }
-
-  // function submitHandler(e) {
-  //   e.preventDefault();
-    
-  // }
+  const navigateToFAQ=()=> {
+    navigate("/FAQ")
+  }
 
   return (
     <div className="welcome">
@@ -27,11 +20,10 @@ import {useState} from "react";
         </p>
         <br />
         <br />
-        <form onSubmit={navigateToSignUp}>
-          <input type="email" required placeholder="Enter your email address" value={welcomeEmail} onChange={(event)=>setWelcomeEmail(event.target.value)}/>
-          {/* {welcomeEmail} */}
-          <input id="signup-button" type="submit" value="Sign Up" />
-        </form>
+        <button id="welcome_button" onClick={navigateToSignUp}>Sign Up</button>
+        <br />
+        <br />
+        <button id="welcome_button" onClick={navigateToFAQ}>Get Started</button>
       </center>
     </div>
   );

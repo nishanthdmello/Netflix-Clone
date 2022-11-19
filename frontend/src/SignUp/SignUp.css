@@ -1,15 +1,14 @@
 #signup {
   background-color: rgb(100, 3, 156);
   background-image: url("../images/bg5.jpg");
-  background-size: 100vw;
-  height: 85vh;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 #signup_form {
   background-color: rgba(195, 65, 255, 0.295);
   border-radius: 15px;
   width: fit-content;
-  height: 530px;
+  height: 80vh;
   padding: 0 40px;
   margin: auto;
 }
@@ -28,11 +27,9 @@
   font-size: larger;
   background-color: rgba(134, 206, 211, 0.801);
   color: rgba(255, 255, 255, 0.788);
-  /* background-color: rgb(255, 93, 247); */
   border-width: 0px;
   border-radius: 10px;
   border-width: 2px;
-  /* border-color: rgb(187, 72, 172); */
 }
 #signup_form .signup {
   cursor: pointer;
@@ -56,7 +53,7 @@
 #signup_form input {
   margin: 20px 0px;
   width: 300px;
-  height: 60px;
+  height: 40px;
   border-radius: 5px;
   background-color: rgb(236 162 255);
   border: 0px;

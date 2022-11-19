@@ -20,7 +20,7 @@
   border-width: 0px;
 }
 
-#signup-button {
+#welcome_button {
   background-color: rgb(131, 32, 224);
   cursor: pointer;
   color: white;
@@ -28,7 +28,7 @@
   width: 130px;
   margin-left: 0px;
   height: 60px;
-  border-radius: 0 10px 10px 0;
+  border-radius: 20px;
   border-width: 0px;
 }
 

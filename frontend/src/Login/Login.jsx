@@ -18,39 +18,30 @@ function Login() {
   }
   const handleSubmit=(e)=>{
     e.preventDefault()
-    // var send_user = {
-    //   username:username,
-    //   password:password
-    // };
-    axios.post("http://localhost:4000/app/login",{username:username,password:password})
+    axios.post("http://localhost:4000/app/login",{email:email,password:password})
     .then((res)=>{
-      if(res.data.message=="true")
+      if(res.data.message==="true")
           navigateToMovies()
       else
           alert("incorrect login credentials")
 
     })
-    // alert(value)
-    // if(value==true)
-    //   navigateToMovies()
-    // else  
-    //   alert("user not found")
   }
-  const [username, setusername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setpassword] = useState("");
   return (
     <div id="login">
       <form onSubmit={handleSubmit}>
         <h3 className="title">Sign In</h3>
         <input
-          type="text"
-          name="username"
+          type="email"
+          name="email"
           required
           autoFocus
           autoComplete="off"
-          placeholder="username"
-          value={username}
-          onChange={(event) => setusername(event.target.value)}
+          placeholder="Email Address"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
         />
         <p className="invalid_username">Invalid Email</p>
         <input
@@ -68,7 +59,7 @@ function Login() {
         <div className="button_container">
           <button className="sign_in_button">Sign In</button>
           <p className="no_account">Don't have an account ?</p>
-          <button className="sign_up_button" onClick={navigate}>
+          <button className="sign_up_button" onClick={navigateToSignUp}>
             Sign Up
           </button>
         </div>

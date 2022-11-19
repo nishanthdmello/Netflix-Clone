@@ -22,25 +22,29 @@ var user
 // }
 
 router.post("/signup", (req, res) => {
-  const signedUpUser = new signup({
-    username: req.body.username,
-    password: req.body.password,
-    confirm_password: req.body.confirm_password,
-  });
-  signedUpUser
-    .save()
-    .then((data) => res.json(data))
-    // .then(data=>console.log(data))
-    .catch((err) => console.log(err));
-  console.log(signedUpUser);
+  if(signup.find({email:req.body.email}).length==0) {
+    const signedUpUser = new signup({
+      email: req.body.email,
+      username:req.body.username,
+      password: req.body.password,
+      confirm_password: req.body.confirm_password,
+    });
+    signedUpUser
+      .save()
+      .then((data) => res.json(data))
+      .catch((err) => console.log(err));
+    console.log(signedUpUser);
+  }
+  else {
+    res.send({message:"existing account"})
+  }
 });
 
 router.post("/login", async (req, res) => {
-  const username = req.body.username;
+  const email = req.body.email;
   const password = req.body.password;
-  // console.log(username,password)
   try {
-        user =  await signup.find({username:username});
+        user =  await signup.find({email:email});
           if(user.length==0)
               res.send({message:"false"})
           else if(user[0].password==password)
