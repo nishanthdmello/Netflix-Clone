@@ -9,10 +9,14 @@ const cors=require('cors')
 dotenv.config()
 // console.log(process.env.DATABASE_URL)
 // console.log(process)
-mongoose.connect(process.env.DATABASE_URL,()=>console.log("database conected"))
+mongoose.connect(process.env.DATABASE_URL,()=>console.log("database conected with ",process.env.DATABASE_URL))
 
 app.use(express.json())
 app.use(cors())
 app.use("/app",routes)
+
+app.get((req,res)=>{
+    res.render("index")
+})
 
 app.listen(4000,()=>console.log("server is running"))

@@ -9,17 +9,27 @@ function CreateAcc() {
   const navigateToPlans = () => {
     navigate("/plans");
   };
-function submitHandler(e){
-  e.preventDefault()
-  const user={
-    username:username,
-    password:password,
-    confirm_password:confirm
+  const checkPassword = (password, confirm) => {
+    if (password === confirm && password.length > 8) return 1;
+    else if (password === confirm && password.length < 8) return 2;
+    else if (password != confirm) return 3;
+  };
+  function submitHandler(e) {
+    e.preventDefault();
+    if (checkPassword(password, confirm) == 1) {
+      const user = {
+        username: username,
+        password: password,
+        confirm_password: confirm,
+      };
+      axios.post("http://localhost:4000/app/signup", user);
+      navigateToPlans();
+      console.log(user);
+    } else if (checkPassword(password, confirm) == 2)
+      alert("password should be more than 8 letters");
+    else if (checkPassword(password, confirm) == 3)
+      alert("password and confirm password are not same");
   }
-  axios.post("http://localhost:4000/app/signup",user)
-  navigateToPlans()
-  console.log(user)
-}
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -65,7 +75,7 @@ function submitHandler(e){
           {/* {confirm} */}
           <br />
           <br />
-          <button >Sign Up</button>
+          <button>Sign Up</button>
         </center>
       </form>
     </div>
