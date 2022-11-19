@@ -21,14 +21,14 @@ function CreateAcc() {
     e.preventDefault();
     if (checkPassword(password, confirm) == 1) {
       const user = {
-        email:email,
+        email: email,
         username: username,
         password: password,
         confirm_password: confirm,
       };
       axios.post("http://localhost:4000/app/signup", user)
       .then((res) => {
-        if(res.data.message==="existing account") {
+        if(res.data.message=="existing account") {
           alert("The email entered by you seems to already have an account!\nTry Signing in!")
           navigateToLogin()
         }

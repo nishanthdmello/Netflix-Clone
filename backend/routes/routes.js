@@ -21,8 +21,10 @@ var user
 //         console.log("user not found")
 // }
 
-router.post("/signup", (req, res) => {
-  if(signup.find({email:req.body.email}).length==0) {
+router.post("/signup", async (req, res) => {
+  user=await signup.find({email:req.body.email})
+  if(user.length==0) {
+    console.log("Hello")
     const signedUpUser = new signup({
       email: req.body.email,
       username:req.body.username,
