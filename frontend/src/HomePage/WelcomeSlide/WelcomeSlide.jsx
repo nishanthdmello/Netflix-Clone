@@ -9,6 +9,14 @@ import {useState} from "react";
     navigate("/signup");
   };
 
+  // function sendEmail(e) {
+  // }
+
+  // function submitHandler(e) {
+  //   e.preventDefault();
+    
+  // }
+
   return (
     <div className="welcome">
       <center>
@@ -19,9 +27,11 @@ import {useState} from "react";
         </p>
         <br />
         <br />
-        <input type="email" placeholder="Enter your email address" value={welcomeEmail} onChange={(event)=>setWelcomeEmail(event.target.value)}/>
-        {/* {welcomeEmail} */}
-        <button onClick={navigateToSignUp}>Sign Up</button>
+        <form onSubmit={navigateToSignUp}>
+          <input type="email" required placeholder="Enter your email address" value={welcomeEmail} onChange={(event)=>setWelcomeEmail(event.target.value)}/>
+          {/* {welcomeEmail} */}
+          <input id="signup-button" type="submit" value="Sign Up" />
+        </form>
       </center>
     </div>
   );

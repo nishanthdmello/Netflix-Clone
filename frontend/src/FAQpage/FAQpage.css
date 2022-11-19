@@ -24,3 +24,7 @@
 #FAQ_page a {
   color: rgb(0, 140, 255);
 }
+
+.img_div img{
+  border-radius: 20px;
+}

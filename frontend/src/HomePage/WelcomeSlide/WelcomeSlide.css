@@ -20,7 +20,7 @@
   border-width: 0px;
 }
 
-.welcome button {
+#signup-button {
   background-color: rgb(131, 32, 224);
   cursor: pointer;
   color: white;

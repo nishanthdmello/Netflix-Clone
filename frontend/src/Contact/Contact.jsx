@@ -1,6 +1,12 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import {twitter_logo} from "../images/twitter_logo.png";
+import {phone_logo} from "../images/phone_logo.png";
+import {gmail_logo} from "../images/gmail_logo.jpg";
+import {github_logo} from "../images/github_logo.png";
+import {insta_logo} from "../images/insta_logo.jpg";
+
 import "./Contact.css";
 
 function Contact() {
