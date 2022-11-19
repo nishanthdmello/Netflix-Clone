@@ -36,15 +36,19 @@ router.post("/signup", (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  const username = req.body.username;
+  const password = req.body.password;
+  // console.log(username,password)
   try {
-    const username = req.body.username;
-    const password = req.body.username;
-        user =  await signup.find({ username:username});
-          if(user.length!=0)
-              value=1;
+        user =  await signup.find({username:username});
+          if(user.length==0)
+              res.send({message:"false"})
+          else if(user[0].password==password)
+              // res.send(user)
+              res.send({message:"true"})
+              // console.log(user) 
           else
-            value=0;
-          console.log(value) 
+          res.send({message:"false"})
     }
     catch (e) {
         console.log(e.message);

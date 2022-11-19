@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Login.css";
 import { useState } from "react";
+import axios from "axios";
+
 
 function Login() {
   const navigate = useNavigate();
@@ -14,11 +16,31 @@ function Login() {
   const navigateToMovies = () => {
     navigate("/Movies");
   }
-  const [username1, setUsername1] = useState("");
-  const [password1, setPassword1] = useState("");
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    // var send_user = {
+    //   username:username,
+    //   password:password
+    // };
+    axios.post("http://localhost:4000/app/login",{username:username,password:password})
+    .then((res)=>{
+      if(res.data.message=="true")
+          navigateToMovies()
+      else
+          alert("incorrect login credentials")
+
+    })
+    // alert(value)
+    // if(value==true)
+    //   navigateToMovies()
+    // else  
+    //   alert("user not found")
+  }
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
   return (
     <div id="login">
-      <form>
+      <form onSubmit={handleSubmit}>
         <h3 className="title">Sign In</h3>
         <input
           type="text"
@@ -26,9 +48,9 @@ function Login() {
           required
           autoFocus
           autoComplete="off"
-          placeholder="Email"
-          value={username1}
-          onChange={(event) => setUsername1(event.target.value)}
+          placeholder="username"
+          value={username}
+          onChange={(event) => setusername(event.target.value)}
         />
         <p className="invalid_username">Invalid Email</p>
         <input
@@ -36,17 +58,17 @@ function Login() {
           name="password"
           required
           placeholder="Password"
-          value={password1}
-          onChange={(event) => setPassword1(event.target.value)}
+          value={password}
+          onChange={(event) => setpassword(event.target.value)}
         />
-        <p className="invalid_password" onClick="navigateToMovies">Invalid Password</p>
+        <p className="invalid_password">Invalid Password</p>
         <p className="forgot_password" onClick={navigateToForgotPassword}>
           Forgot Password ?
         </p>
         <div className="button_container">
-          <button className="sign_in_button" onClick={navigateToMovies}>Sign In</button>
+          <button className="sign_in_button">Sign In</button>
           <p className="no_account">Don't have an account ?</p>
-          <button className="sign_up_button" onClick={navigateToSignUp}>
+          <button className="sign_up_button" onClick={navigate}>
             Sign Up
           </button>
         </div>
